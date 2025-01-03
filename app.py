@@ -93,7 +93,7 @@ def main():
 
     # Layout: File Upload and Display
     with st.container():
-        col1, col2 = st.columns([1, 2])
+        col1, col2 = st.columns([1, 1.25])
 
         with col1:
             st.markdown("### 📂 Upload Resume")
@@ -113,10 +113,10 @@ def main():
     # Prediction Section
     if uploaded_file is not None:
         st.markdown("---")
-        st.markdown("<h3 style='text-align: center;'>Predicted Category</h3>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center;'>Predicted Category</h2>", unsafe_allow_html=True)
         category = pred(resume_text)
         st.markdown(
-            f"<h2 style='text-align: center; color: #FF5733;'>🎯 {category}</h2>",
+            f"<h4 style='text-align: center; color: #FF5733;'>🎯 {category}</h4>",
             unsafe_allow_html=True,
         )
 
